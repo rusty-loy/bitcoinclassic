@@ -1465,6 +1465,28 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
             // Create new keyUser and set as default key
             RandAddSeedPerfmon();
 
+            if (GetBoolArg("-usehd", true))
+            {
+                // HD by default
+                // make fresh seed
+                CHDChain chain;
+                chain.keypathTemplate = "m/c'";
+                
+                CKey key;
+                key.MakeNewKey(true);
+                CKeyingMaterial seed = CKeyingMaterial(32);
+                seed.assign(key.begin(), key.end());
+
+                CExtKey masterKey;
+                masterKey.SetMaster(&seed[0], seed.size());
+
+                CExtPubKey masterPubKey = masterKey.Neuter();
+                chain.chainID = masterPubKey.pubkey.GetHash();
+                
+                pwalletMain->AddChain(chain);
+                pwalletMain->AddMasterSeed(chain.chainID, seed);
+            }
+
             CPubKey newDefaultKey;
             if (pwalletMain->GetKeyFromPool(newDefaultKey)) {
                 pwalletMain->SetDefaultKey(newDefaultKey);

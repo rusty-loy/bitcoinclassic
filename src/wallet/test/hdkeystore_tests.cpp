@@ -22,6 +22,8 @@ BOOST_FIXTURE_TEST_SUITE(hdkeystore_tests, TestingSetup)
 
 BOOST_AUTO_TEST_CASE(hdkeystore_tests)
 {
+    bool fFirstRun;
+    DBErrors nLoadWalletRet = pwalletMain->LoadWallet(fFirstRun);
     LOCK(pwalletMain->cs_wallet);
     
     CKey key;
@@ -69,6 +71,15 @@ BOOST_AUTO_TEST_CASE(hdkeystore_tests)
     pwalletMain->GetKey(hdpubkey.pubkey.GetID(), keyTest);
 
     BOOST_CHECK(CBitcoinSecret(keyTest).ToString() == "L3FttmGb7kM6GYUxpR3d4LSVRLzXUfTUpa5wezXH17iqUEfP2MD4");
+
+
+    CPubKey pkey = pwalletMain->GenerateNewKey();
+    std::string test23 = CBitcoinAddress(pkey.GetID()).ToString();
+
+    BOOST_CHECK(CBitcoinAddress(pkey.GetID()).ToString() == "1PEzTQaYAqcnLR6Ug23pzFqTEakBttFrgo");
+    BOOST_CHECK(pwalletMain->GetNextChildIndex(chain.chainID, false) == 3);
+
+    pwalletMain->Flush(true);
 }
 
 BOOST_AUTO_TEST_SUITE_END()

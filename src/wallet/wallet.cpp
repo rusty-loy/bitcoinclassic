@@ -80,9 +80,17 @@ CPubKey CWallet::GenerateNewKey()
 {
     AssertLockHeld(cs_wallet); // mapKeyMetadata
     bool fCompressed = CanSupportFeature(FEATURE_COMPRPUBKEY); // default to compressed public keys if we want 0.6.0 wallets
-
     CKey secret;
-    secret.MakeNewKey(fCompressed);
+
+    HDChainID activeHDChainID;
+    CHDPubKey hdPubKey;
+    bool validHDChain = GetActiveHDChainID(activeHDChainID);
+    if (validHDChain)
+    {
+        DeriveHDPubKeyAtIndex(activeHDChainID, hdPubKey, GetNextChildIndex(activeHDChainID, false), false);
+        LoadHDPubKey(hdPubKey);
+        DeriveKey(hdPubKey, secret);
+    }
 
     // Compressed public keys were introduced in version 0.6.0
     if (fCompressed)
@@ -97,8 +105,12 @@ CPubKey CWallet::GenerateNewKey()
     if (!nTimeFirstKey || nCreationTime < nTimeFirstKey)
         nTimeFirstKey = nCreationTime;
 
-    if (!AddKeyPubKey(secret, pubkey))
-        throw std::runtime_error("CWallet::GenerateNewKey(): AddKey failed");
+    //store the pubkey (& HD meta-information if HD derivation was used)
+    if (validHDChain)
+        CWalletDB(strWalletFile).WriteHDPubKey(hdPubKey, mapKeyMetadata[pubkey.GetID()]);
+    else
+        if (!AddKeyPubKey(secret, pubkey))
+            throw std::runtime_error("CWallet::GenerateNewKey(): AddKey failed");
     return pubkey;
 }
 
@@ -2630,6 +2642,36 @@ std::set<CTxDestination> CWallet::GetAccountAddresses(const std::string& strAcco
             result.insert(address);
     }
     return result;
+}
+
+bool CWallet::AddChain(const CHDChain& chain)
+{
+    LOCK(cs_wallet);
+    CHDKeyStore::AddChain(chain);
+    if (!CWalletDB(strWalletFile).WriteHDChain(chain))
+        throw runtime_error("AddChain(): writing chain failed");
+    if (!SetActiveHDChainID(chain.chainID))
+        throw runtime_error("AddChain(): could not set active chain");
+    return true;
+}
+
+bool CWallet::SetActiveHDChainID(const HDChainID& chainID, bool check)
+{
+    LOCK(cs_wallet);
+
+    CHDChain chainOut;
+    if (check && !GetChain(chainID, chainOut))
+        return false;
+
+    activeHDChain = chainID;
+    return true;
+}
+
+bool CWallet::GetActiveHDChainID(HDChainID& chainID)
+{
+    LOCK(cs_wallet);
+    chainID = activeHDChain;
+    return true;
 }
 
 bool CReserveKey::GetReservedKey(CPubKey& pubkey)

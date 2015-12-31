@@ -598,6 +598,53 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
                 return false;
             }
         }
+        else if (strType == "hdmasterseed")
+        {
+            uint256 masterPubKeyHash;
+            CKeyingMaterial masterSeed;
+            ssKey >> masterPubKeyHash;
+            ssValue >> masterSeed;
+            pwallet->AddMasterSeed(masterPubKeyHash, masterSeed);
+        }
+        else if (strType == "hdcryptedmasterseed")
+        {
+            uint256 masterPubKeyHash;
+            std::vector<unsigned char> vchCryptedSecret;
+            ssKey >> masterPubKeyHash;
+            ssValue >> vchCryptedSecret;
+            pwallet->AddCryptedMasterSeed(masterPubKeyHash, vchCryptedSecret);
+        }
+        else if (strType == "hdactivechain")
+        {
+            HDChainID chainID;
+            ssValue >> chainID;
+            pwallet->SetActiveHDChainID(chainID, false); //don't check if the chain exists because this record could come in before the CHDChain object itself
+        }
+        else if (strType == "hdpubkey")
+        {
+            CHDPubKey hdPubKey;
+            ssValue >> hdPubKey;
+            if (!hdPubKey.IsValid())
+            {
+                strErr = "Error reading wallet database: CHDPubKey corrupt";
+                return false;
+            }
+            if (!pwallet->LoadHDPubKey(hdPubKey))
+            {
+                strErr = "Error reading wallet database: LoadHDPubKey failed";
+                return false;
+            }
+        }
+        else if (strType == "hdchain")
+        {
+            CHDChain chain;
+            ssValue >> chain;
+            if (!pwallet->AddChain(chain))
+            {
+                strErr = "Error reading wallet database: AddChain failed";
+                return false;
+            }
+        }
     } catch (...)
     {
         return false;
@@ -997,4 +1044,51 @@ bool CWalletDB::EraseDestData(const std::string &address, const std::string &key
 {
     nWalletDBUpdated++;
     return Erase(std::make_pair(std::string("destdata"), std::make_pair(address, key)));
+}
+
+bool CWalletDB::WriteHDMasterSeed(const uint256& hash, const CKeyingMaterial& masterSeed)
+{
+    nWalletDBUpdated++;
+    return Write(std::make_pair(std::string("hdmasterseed"), hash), masterSeed);
+}
+
+bool CWalletDB::WriteHDCryptedMasterSeed(const uint256& hash, const std::vector<unsigned char>& vchCryptedSecret)
+{
+    nWalletDBUpdated++;
+    if (!Write(std::make_pair(std::string("hdcryptedmasterseed"), hash), vchCryptedSecret))
+        return false;
+
+    Erase(std::make_pair(std::string("hdmasterseed"), hash));
+    Erase(std::make_pair(std::string("hdmasterseed"), hash));
+
+    return true;
+}
+
+bool CWalletDB::EraseHDMasterSeed(const uint256& hash)
+{
+    nWalletDBUpdated++;
+    return Erase(std::make_pair(std::string("hdmasterseed"), hash));
+}
+
+bool CWalletDB::WriteHDChain(const CHDChain &chain)
+{
+    nWalletDBUpdated++;
+    return Write(std::make_pair(std::string("hdchain"), chain.chainID), chain);
+}
+
+bool CWalletDB::WriteHDPubKey(const CHDPubKey& hdPubKey, const CKeyMetadata& keyMeta)
+{
+    nWalletDBUpdated++;
+
+    if (!Write(std::make_pair(std::string("keymeta"), hdPubKey.pubkey),
+               keyMeta))
+        return false;
+
+    return Write(std::make_pair(std::string("hdpubkey"), hdPubKey.pubkey), hdPubKey);
+}
+
+bool CWalletDB::WriteHDAchiveChain(const uint256& hash)
+{
+    nWalletDBUpdated++;
+    return Write(std::string("hdactivechain"), hash);
 }
