@@ -82,15 +82,23 @@ CPubKey CWallet::GenerateNewKey()
     bool fCompressed = CanSupportFeature(FEATURE_COMPRPUBKEY); // default to compressed public keys if we want 0.6.0 wallets
     CKey secret;
 
+    // Create new metadata
+    int64_t nCreationTime = GetTime();
+    CKeyMetadata metadata(nCreationTime);
+
+    // check if there is an active HD chain
     HDChainID activeHDChainID;
-    CHDPubKey hdPubKey;
     bool validHDChain = GetActiveHDChainID(activeHDChainID);
     if (validHDChain)
     {
-        DeriveHDPubKeyAtIndex(activeHDChainID, hdPubKey, GetNextChildIndex(activeHDChainID, false), false);
-        LoadHDPubKey(hdPubKey);
-        DeriveKey(hdPubKey, secret);
+        // hd derive key
+        std::string keypath;
+        DeriveKeyAtIndex(activeHDChainID, secret, keypath, GetNextChildIndex(activeHDChainID, false), false);
+        metadata.keypath = keypath;
+        metadata.chainID = activeHDChainID;
     }
+    else
+        secret.MakeNewKey(fCompressed);
 
     // Compressed public keys were introduced in version 0.6.0
     if (fCompressed)
@@ -99,18 +107,12 @@ CPubKey CWallet::GenerateNewKey()
     CPubKey pubkey = secret.GetPubKey();
     assert(secret.VerifyPubKey(pubkey));
 
-    // Create new metadata
-    int64_t nCreationTime = GetTime();
-    mapKeyMetadata[pubkey.GetID()] = CKeyMetadata(nCreationTime);
+    //mem store metadata, time of first key (wallet birthday)
+    mapKeyMetadata[pubkey.GetID()] = metadata;
     if (!nTimeFirstKey || nCreationTime < nTimeFirstKey)
         nTimeFirstKey = nCreationTime;
-
-    //store the pubkey (& HD meta-information if HD derivation was used)
-    if (validHDChain)
-        CWalletDB(strWalletFile).WriteHDPubKey(hdPubKey, mapKeyMetadata[pubkey.GetID()]);
-    else
-        if (!AddKeyPubKey(secret, pubkey))
-            throw std::runtime_error("CWallet::GenerateNewKey(): AddKey failed");
+    if (!AddKeyPubKey(secret, pubkey))
+        throw std::runtime_error("CWallet::GenerateNewKey(): AddKey failed");
     return pubkey;
 }
 

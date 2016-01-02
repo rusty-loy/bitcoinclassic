@@ -89,22 +89,6 @@ bool CHDKeyStore::GetCryptedMasterSeed(const HDChainID& chainID, std::vector<uns
     return true;
 }
 
-bool CHDKeyStore::HaveKey(const CKeyID &address) const
-{
-    LOCK(cs_KeyStore);
-    if (mapHDPubKeys.count(address) > 0)
-        return true;
-
-    return CCryptoKeyStore::HaveKey(address);
-}
-
-bool CHDKeyStore::LoadHDPubKey(const CHDPubKey &pubkey)
-{
-    LOCK(cs_KeyStore);
-    mapHDPubKeys[pubkey.pubkey.GetID()] = pubkey;
-    return true;
-}
-
 bool CHDKeyStore::GetAvailableChainIDs(std::vector<HDChainID>& chainIDs)
 {
     LOCK(cs_KeyStore);
@@ -124,36 +108,6 @@ bool CHDKeyStore::GetAvailableChainIDs(std::vector<HDChainID>& chainIDs)
     }
 
     return true;
-}
-
-bool CHDKeyStore::GetKey(const CKeyID &address, CKey &keyOut) const
-{
-    LOCK(cs_KeyStore);
-
-    std::map<CKeyID, CHDPubKey>::const_iterator mi = mapHDPubKeys.find(address);
-    if (mi != mapHDPubKeys.end())
-    {
-        if (!DeriveKey(mi->second, keyOut))
-            return false;
-
-        return true;
-    }
-
-    return CCryptoKeyStore::GetKey(address, keyOut);
-}
-
-bool CHDKeyStore::GetPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const
-{
-    LOCK(cs_KeyStore);
-
-    std::map<CKeyID, CHDPubKey>::const_iterator mi = mapHDPubKeys.find(address);
-    if (mi != mapHDPubKeys.end())
-    {
-        vchPubKeyOut = mi->second.pubkey;
-        return true;
-    }
-
-    return CCryptoKeyStore::GetPubKey(address, vchPubKeyOut);
 }
 
 bool CHDKeyStore::PrivKeyDer(const std::string keypath, const HDChainID& chainID, CExtKey& extKeyOut) const
@@ -210,54 +164,69 @@ bool CHDKeyStore::PrivKeyDer(const std::string keypath, const HDChainID& chainID
     return true;
 }
 
-bool CHDKeyStore::DeriveKey(const CHDPubKey hdPubKey, CKey& keyOut) const
+bool CHDKeyStore::DeriveKey(const HDChainID chainID, const std::string keypath, CKey& keyOut) const
 {
     //this methode required no locking
-    std::string keypath = hdPubKey.keypath;
     CExtKey extKeyOut;
-    if (!PrivKeyDer(keypath, hdPubKey.chainID, extKeyOut))
+    if (!PrivKeyDer(keypath, chainID, extKeyOut))
         return false;
 
     keyOut = extKeyOut.key;
     return true;
 }
 
-bool CHDKeyStore::DeriveHDPubKeyAtIndex(const HDChainID chainID, CHDPubKey& hdPubKeyOut, unsigned int nIndex, bool internal) const
+bool CHDKeyStore::DeriveKeyAtIndex(const HDChainID chainID, CKey& keyOut, std::string& keypathOut, unsigned int nIndex, bool internal) const
 {
     CHDChain hdChain;
     if (!GetChain(chainID, hdChain))
         return false;
 
     if (nIndex >= 0x80000000)
-        throw std::runtime_error("CHDKeyStore::DeriveHDPubKeyAtIndex(): No more available keys!");
+        throw std::runtime_error("CHDKeyStore::DerivePubKeyAtIndex(): No more available keys!");
+
+    keypathOut = hdChain.keypathTemplate;
+    boost::replace_all(keypathOut, "c", itostr(internal)); //replace the chain switch index
+
+    keypathOut += "/"+itostr(nIndex)+"'"; //add hardened flag
+
+    CExtKey extKeyOut;
+    if (!PrivKeyDer(keypathOut, chainID, extKeyOut))
+        throw std::runtime_error("CHDKeyStore::DerivePubKeyAtIndex(): Private Key Derivation failed!");
+    keyOut = extKeyOut.key;
+
+    return true;
+}
+
+bool CHDKeyStore::DerivePubKeyAtIndex(const HDChainID chainID, CPubKey& pubKeyOut, std::string keypathOut, unsigned int nIndex, bool internal) const
+{
+    CHDChain hdChain;
+    if (!GetChain(chainID, hdChain))
+        return false;
+
+    if (nIndex >= 0x80000000)
+        throw std::runtime_error("CHDKeyStore::DerivePubKeyAtIndex(): No more available keys!");
 
     CExtPubKey childKey;
-    hdPubKeyOut.keypath = hdChain.keypathTemplate;
-    boost::replace_all(hdPubKeyOut.keypath, "c", itostr(internal)); //replace the chain switch index
+    keypathOut = hdChain.keypathTemplate;
+    boost::replace_all(keypathOut, "c", itostr(internal)); //replace the chain switch index
 
     if ( (internal && !hdChain.internalPubKey.pubkey.IsValid()) || !hdChain.externalPubKey.pubkey.IsValid())
     {
-        hdPubKeyOut.keypath += "/"+itostr(nIndex)+"'"; //add hardened flag
+        keypathOut += "/"+itostr(nIndex)+"'"; //add hardened flag
 
         CExtKey extKeyOut;
-        if (!PrivKeyDer(hdPubKeyOut.keypath, chainID, extKeyOut))
-            throw std::runtime_error("CHDKeyStore::DeriveHDPubKeyAtIndex(): Private Key Derivation failed!");
+        if (!PrivKeyDer(keypathOut, chainID, extKeyOut))
+            throw std::runtime_error("CHDKeyStore::DerivePubKeyAtIndex(): Private Key Derivation failed!");
         childKey = extKeyOut.Neuter();
     }
     else
     {
-
-        hdPubKeyOut.keypath += "/"+itostr(nIndex);
+        keypathOut += "/"+itostr(nIndex);
 
         CExtPubKey useExtKey = internal ? hdChain.internalPubKey : hdChain.externalPubKey;
         if (!useExtKey.Derive(childKey, nIndex))
-            throw std::runtime_error("CHDKeyStore::DeriveHDPubKeyAtIndex(): Key deriving failed!");
+            throw std::runtime_error("CHDKeyStore::DerivePubKeyAtIndex(): Key deriving failed!");
     }
-
-    hdPubKeyOut.pubkey = childKey.pubkey;
-    hdPubKeyOut.chainID = chainID;
-    hdPubKeyOut.nChild = nIndex;
-    hdPubKeyOut.internal = internal;
 
     return true;
 }
@@ -268,10 +237,32 @@ unsigned int CHDKeyStore::GetNextChildIndex(const HDChainID& chainID, bool inter
 
     {
         LOCK(cs_KeyStore);
+
+        CHDChain hdChain;
+        if (!GetChain(chainID, hdChain))
+            return false;
+
+        std::string keypathBase = hdChain.keypathTemplate;
+        boost::replace_all(keypathBase, "c", itostr(internal)); //replace the chain switch index
+
         //get next unused child index
-        for (std::map<CKeyID, CHDPubKey>::iterator it = mapHDPubKeys.begin(); it != mapHDPubKeys.end(); ++it)
-            if (it->second.chainID == chainID && it->second.internal == internal)
-                vIndices.push_back(it->second.nChild);
+        for (std::map<CKeyID, CKeyMetadata>::iterator it = mapKeyMetadata.begin(); it != mapKeyMetadata.end(); ++it)
+        {
+            //skip non hd keys
+            if (it->second.keypath.size() == 0)
+                continue;
+
+            std::string keysBaseKeypath = it->second.keypath.substr(0, it->second.keypath.find_last_of("/"));
+            std::string childStr = it->second.keypath.substr(it->second.keypath.find_last_of("/") + 1);
+            boost::erase_all(childStr, "'");
+            int32_t nChild;
+            if(it->second.chainID == chainID &&
+               it->second.keypath.substr(0, it->second.keypath.find_last_of("/")) == keypathBase &&
+               ParseInt32(childStr, &nChild))
+            {
+                vIndices.push_back(nChild);
+            }
+        }
     }
 
     for (unsigned int i=0;i<0x80000000;i++)

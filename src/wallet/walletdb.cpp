@@ -620,21 +620,6 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             ssValue >> chainID;
             pwallet->SetActiveHDChainID(chainID, false); //don't check if the chain exists because this record could come in before the CHDChain object itself
         }
-        else if (strType == "hdpubkey")
-        {
-            CHDPubKey hdPubKey;
-            ssValue >> hdPubKey;
-            if (!hdPubKey.IsValid())
-            {
-                strErr = "Error reading wallet database: CHDPubKey corrupt";
-                return false;
-            }
-            if (!pwallet->LoadHDPubKey(hdPubKey))
-            {
-                strErr = "Error reading wallet database: LoadHDPubKey failed";
-                return false;
-            }
-        }
         else if (strType == "hdchain")
         {
             CHDChain chain;
@@ -1074,17 +1059,6 @@ bool CWalletDB::WriteHDChain(const CHDChain &chain)
 {
     nWalletDBUpdated++;
     return Write(std::make_pair(std::string("hdchain"), chain.chainID), chain);
-}
-
-bool CWalletDB::WriteHDPubKey(const CHDPubKey& hdPubKey, const CKeyMetadata& keyMeta)
-{
-    nWalletDBUpdated++;
-
-    if (!Write(std::make_pair(std::string("keymeta"), hdPubKey.pubkey),
-               keyMeta))
-        return false;
-
-    return Write(std::make_pair(std::string("hdpubkey"), hdPubKey.pubkey), hdPubKey);
 }
 
 bool CWalletDB::WriteHDAchiveChain(const uint256& hash)

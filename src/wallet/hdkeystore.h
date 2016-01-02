@@ -12,34 +12,23 @@
 
 typedef uint256 HDChainID;
 
-/** hdpublic key for a persistant store. */
-class CHDPubKey
+class CKeyMetadata
 {
 public:
-    static const int CURRENT_VERSION=1;
+    static const int CURRENT_VERSION=2;
     int nVersion;
+    int64_t nCreateTime; // 0 means unknown
+    HDChainID chainID;
+    std::string keypath;
 
-    CPubKey pubkey;
-    unsigned int nChild;
-    HDChainID chainID; //hash of the chains master pubkey
-    std::string keypath; //example: m/44'/0'/0'/0/1
-    bool internal;
-
-    CHDPubKey()
+    CKeyMetadata()
     {
         SetNull();
     }
-
-    bool IsValid()
+    CKeyMetadata(int64_t nCreateTime_)
     {
-        return pubkey.IsValid();
-    }
-
-    void SetNull()
-    {
-        nVersion = CHDPubKey::CURRENT_VERSION;
-        chainID.SetNull();
-        keypath.clear();
+        nVersion = CKeyMetadata::CURRENT_VERSION;
+        nCreateTime = nCreateTime_;
     }
 
     ADD_SERIALIZE_METHODS;
@@ -48,12 +37,21 @@ public:
     inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion) {
         READWRITE(this->nVersion);
         nVersion = this->nVersion;
+        READWRITE(nCreateTime);
+        if (nVersion >= 2)
+        {
+            READWRITE(keypath);
+            if (keypath.size() > 0)
+                READWRITE(chainID);
+        }
+    }
 
-        READWRITE(pubkey);
-        READWRITE(nChild);
-        READWRITE(chainID);
-        READWRITE(keypath);
-        READWRITE(internal);
+    void SetNull()
+    {
+        nVersion = CKeyMetadata::CURRENT_VERSION;
+        nCreateTime = 0;
+        keypath.clear();
+        chainID.SetNull();
     }
 };
 
@@ -122,16 +120,17 @@ class CHDKeyStore : public CCryptoKeyStore
 protected:
     std::map<HDChainID, CKeyingMaterial > mapHDMasterSeeds; //master seeds are stored outside of CHDChain (mind crypting)
     std::map<HDChainID, std::vector<unsigned char> > mapHDCryptedMasterSeeds;
-    std::map<CKeyID, CHDPubKey> mapHDPubKeys; //all hd pubkeys of all chains
     std::map<HDChainID, CHDChain> mapChains; //all available chains
 
     //!private key derivition of a ext priv key
     bool PrivKeyDer(const std::string chainPath, const HDChainID& chainID, CExtKey& extKeyOut) const;
 
     //!derive key from a CHDPubKey object
-    bool DeriveKey(const CHDPubKey hdPubKey, CKey& keyOut) const;
+    bool DeriveKey(const HDChainID chainID, const std::string keypath, CKey& keyOut) const;
 
 public:
+    std::map<CKeyID, CKeyMetadata> mapKeyMetadata;
+
     //!add a master seed with a given pubkeyhash (memory only)
     virtual bool AddMasterSeed(const HDChainID& chainID, const CKeyingMaterial& masterSeed);
 
@@ -150,9 +149,6 @@ public:
     //!writes all available chain ids to a vector
     virtual bool GetAvailableChainIDs(std::vector<HDChainID>& chainIDs);
 
-    //!add a CHDPubKey object to the keystore (memory only)
-    bool LoadHDPubKey(const CHDPubKey &pubkey);
-
     //!add a new chain to the keystore (memory only)
     bool AddChain(const CHDChain& chain);
 
@@ -160,22 +156,13 @@ public:
     bool GetChain(const HDChainID chainID, CHDChain& chainOut) const;
 
     //!Derives a CHDPubKey object in a given chain defined by chainId from the existing external or internal chain root pub key
-    bool DeriveHDPubKeyAtIndex(const HDChainID chainID, CHDPubKey& hdPubKeyOut, unsigned int nIndex, bool internal) const;
-
+    bool DerivePubKeyAtIndex(const HDChainID chainID, CPubKey& pubKeyOut, std::string keypathOut, unsigned int nIndex, bool internal) const;
+    bool DeriveKeyAtIndex(const HDChainID chainID, CKey& keyOut, std::string& keypathOut, unsigned int nIndex, bool internal) const;
     /**
      * Get next available index for a child key in chain defined by given chain id
      * @return next available index
      * @warning This will "fill gaps". If you have m/0/0, m/0/1, m/0/2, m/0/100 it will return 3 (m/0/3)
      */
     unsigned int GetNextChildIndex(const HDChainID& chainID, bool internal);
-
-    //!check if a wallet has a certain key
-    bool HaveKey(const CKeyID &address) const;
-
-    //!get a key with given keyid for signing, etc. (private key operation)
-    bool GetKey(const CKeyID &address, CKey &keyOut) const;
-
-    //!get a pubkey with given keyid for verifiying, etc.
-    bool GetPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const;
 };
 #endif // BITCOIN_WALLET_HDKEYSTORE_H
