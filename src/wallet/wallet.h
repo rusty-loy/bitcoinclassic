@@ -7,7 +7,6 @@
 #define BITCOIN_WALLET_WALLET_H
 
 #include "amount.h"
-#include "rpcserver.h"
 #include "streams.h"
 #include "tinyformat.h"
 #include "ui_interface.h"
@@ -16,7 +15,7 @@
 #include "wallet/crypter.h"
 #include "wallet/wallet_ismine.h"
 #include "wallet/walletdb.h"
-#include "wallet/wallet_rpcdispatch.h"
+#include "wallet/rpcwallet.h"
 
 #include <algorithm>
 #include <map>
@@ -785,18 +784,6 @@ public:
     bool GetBroadcastTransactions() const { return fBroadcastTransactions; }
     /** Set whether this wallet broadcasts transactions. */
     void SetBroadcastTransactions(bool broadcast) { fBroadcastTransactions = broadcast; }
-
-    static void walletRegisterRPCCommands()
-    {
-        unsigned int vcidx;
-        for (vcidx = 0; vcidx < (sizeof(vWalletRPCCommands) / sizeof(vWalletRPCCommands[0])); vcidx++)
-        {
-            const CRPCCommand *pcmd;
-
-            pcmd = &vWalletRPCCommands[vcidx];
-            tableRPC.appendCommand(pcmd->name, pcmd);
-        }
-    }
 };
 
 /** A key allocated from the key pool. */
