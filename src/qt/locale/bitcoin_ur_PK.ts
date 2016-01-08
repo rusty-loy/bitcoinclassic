@@ -349,7 +349,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>bitcoin-classic</name>
     <message>
         <source>This help message</source>
         <translation>یہ مدد کا پیغام</translation>

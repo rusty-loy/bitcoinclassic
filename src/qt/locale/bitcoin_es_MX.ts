@@ -1049,7 +1049,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>bitcoin-classic</name>
     <message>
         <source>&lt;category&gt; can be:</source>
         <translation>&lt;categoria&gt; puede ser:</translation>

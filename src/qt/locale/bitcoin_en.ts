@@ -3576,7 +3576,7 @@
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>bitcoin-classic</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+250"/>
         <source>Options:</source>

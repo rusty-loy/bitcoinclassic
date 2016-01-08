@@ -2775,7 +2775,7 @@
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>bitcoin-classic</name>
     <message>
         <source>Options:</source>
         <translation>Indstillinger:</translation>
