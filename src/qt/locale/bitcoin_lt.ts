@@ -263,8 +263,8 @@
         <translation>Atidaryti &amp;URI...</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
-        <translation>Bitcoin Core klientas</translation>
+        <source>Bitcoin Classic client</source>
+        <translation>Bitcoin Classic klientas</translation>
     </message>
     <message>
         <source>Importing blocks from disk...</source>
@@ -315,8 +315,8 @@
         <translation>&amp;Gauti</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
-        <translation>Rodyti informaciją apie Bitcoin Core</translation>
+        <source>Show information about Bitcoin Classic</source>
+        <translation>Rodyti informaciją apie Bitcoin Classic</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -347,12 +347,12 @@
         <translation>Kortelių įrankinė</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin branduolys</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>&amp;Apie Bitcoin Core</translation>
+        <source>&amp;About Bitcoin Classic</source>
+        <translation>&amp;Apie Bitcoin Classic</translation>
     </message>
     <message>
         <source>Error</source>
@@ -606,7 +606,7 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin branduolys</translation>
     </message>
     <message>
@@ -614,8 +614,8 @@
         <translation>versija</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>Apie Bitcoin Core</translation>
+        <source>About Bitcoin Classic</source>
+        <translation>Apie Bitcoin Classic</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -637,11 +637,11 @@
         <translation>Sveiki</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Sveiki atvykę į Bitcoin Core.</translation>
+        <source>Welcome to Bitcoin Classic.</source>
+        <translation>Sveiki atvykę į Bitcoin Classic.</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin branduolys</translation>
     </message>
     <message>
@@ -1229,7 +1229,7 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin branduolys</translation>
     </message>
     <message>

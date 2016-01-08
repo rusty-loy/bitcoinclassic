@@ -168,8 +168,8 @@
         <translation>Tem a certeza que deseja encriptar a carteira?</translation>
     </message>
     <message>
-        <source>Bitcoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>O cliente Bitcoin Core irá agora ser fechado para terminar o processo de encriptação. Recorde que a encriptação da sua carteira não protegerá totalmente os seus bitcoins de serem roubados por programas maliciosos que infectem o seu computador.</translation>
+        <source>Bitcoin Classic will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <translation>O cliente Bitcoin Classic irá agora ser fechado para terminar o processo de encriptação. Recorde que a encriptação da sua carteira não protegerá totalmente os seus bitcoins de serem roubados por programas maliciosos que infectem o seu computador.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -295,8 +295,8 @@
         <translation>Abrir &amp;URI...</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
-        <translation>Cliente Bitcoin Core</translation>
+        <source>Bitcoin Classic client</source>
+        <translation>Cliente Bitcoin Classic</translation>
     </message>
     <message>
         <source>Importing blocks from disk...</source>
@@ -347,8 +347,8 @@
         <translation>&amp;Receber</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
-        <translation>Mostrar informação sobre Bitcoin Core</translation>
+        <source>Show information about Bitcoin Classic</source>
+        <translation>Mostrar informação sobre Bitcoin Classic</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -387,20 +387,20 @@
         <translation>Barra de separadores</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
         <translation>Solicitar pagamentos (gera códigos QR e URIs bitcoin:)</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>&amp;Sobre o Bitcoin Core</translation>
+        <source>&amp;About Bitcoin Classic</source>
+        <translation>&amp;Sobre o Bitcoin Classic</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Core</source>
-        <translation>Modificar opções de configuração de Bitcoin Core</translation>
+        <source>Modify configuration options for Bitcoin Classic</source>
+        <translation>Modificar opções de configuração de Bitcoin Classic</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -419,8 +419,8 @@
         <translation>&amp;Opções da linha de &amp;comandos</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Mostrar a mensagem de ajuda do Bitcoin Core para obter uma lista com possíveis opções de linha de comandos</translation>
+        <source>Show the Bitcoin Classic help message to get a list with possible Bitcoin command-line options</source>
+        <translation>Mostrar a mensagem de ajuda do Bitcoin Classic para obter uma lista com possíveis opções de linha de comandos</translation>
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to Bitcoin network</source>
@@ -844,8 +844,8 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
         <source>version</source>
@@ -856,8 +856,8 @@
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>Sobre o Bitcoin Core</translation>
+        <source>About Bitcoin Classic</source>
+        <translation>Sobre o Bitcoin Classic</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -879,16 +879,16 @@
         <translation>Bem-vindo</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Bem-vindo ao Bitcoin Core.</translation>
+        <source>Welcome to Bitcoin Classic.</source>
+        <translation>Bem-vindo ao Bitcoin Classic.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
-        <translation>Sendo esta a primeira vez que o programa é iniciado, poderá escolher onde o Bitcoin Core irá guardar os seus dados.</translation>
+        <source>As this is the first time the program is launched, you can choose where Bitcoin Classic will store its data.</source>
+        <translation>Sendo esta a primeira vez que o programa é iniciado, poderá escolher onde o Bitcoin Classic irá guardar os seus dados.</translation>
     </message>
     <message>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>O Bitcoin Core vai transferir e armazenar uma cópia do "block chain" (cadeia de blocos). Pelo menos %1GB de dados serão armazenados nesta pasta, e vão crescer ao longo do tempo. A sua carteira também irá ser armazenada nesta pasta.</translation>
+        <source>Bitcoin Classic will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>O Bitcoin Classic vai transferir e armazenar uma cópia do "block chain" (cadeia de blocos). Pelo menos %1GB de dados serão armazenados nesta pasta, e vão crescer ao longo do tempo. A sua carteira também irá ser armazenada nesta pasta.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -899,8 +899,8 @@
         <translation>Utilizar uma pasta de dados personalizada:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -981,8 +981,8 @@
         <translation>Minimize ao invés de sair da aplicação quando a janela é fechada. Com esta  opção selecionada, a aplicação apenas será encerrada quando escolher Sair da aplicação no menú.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Core.</source>
-        <translation>A linguagem da interface do utilizador pode ser definida aqui. Esta definição entrará em efeito após reiniciar o Bitcoin Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Classic.</source>
+        <translation>A linguagem da interface do utilizador pode ser definida aqui. Esta definição entrará em efeito após reiniciar o Bitcoin Classic.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1010,12 +1010,12 @@
         <translation>&amp;Rede</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin Core after logging in to the system.</source>
-        <translation>Começar o Bitcoin Core automaticamente ao iniciar sessão no sistema.</translation>
+        <source>Automatically start Bitcoin Classic after logging in to the system.</source>
+        <translation>Começar o Bitcoin Classic automaticamente ao iniciar sessão no sistema.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Core on system login</source>
-        <translation>&amp;Começar o Bitcoin Core ao iniciar o sistema</translation>
+        <source>&amp;Start Bitcoin Classic on system login</source>
+        <translation>&amp;Começar o Bitcoin Classic ao iniciar o sistema</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -1556,8 +1556,8 @@
         <translation>Limpar consola</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin Core RPC console.</source>
-        <translation>Bem-vindo à consola RPC do Bitcoin Core.</translation>
+        <source>Welcome to the Bitcoin Classic RPC console.</source>
+        <translation>Bem-vindo à consola RPC do Bitcoin Classic.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2098,8 +2098,8 @@
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>O Bitcoin Core está a encerrar...</translation>
+        <source>Bitcoin Classic is shutting down...</source>
+        <translation>O Bitcoin Classic está a encerrar...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2240,12 +2240,12 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Os programadores do Bitcoin Core</translation>
+        <source>The Bitcoin Classic developers</source>
+        <translation>Os programadores do Bitcoin Classic</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2782,8 +2782,8 @@
         <translation>Esta é uma versão de testes pré-lançamento - use à sua responsabilidade - não usar para minar ou aplicações comerciais</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Bitcoin Core is probably already running.</source>
-        <translation>Incapaz de vincular à porta %s neste computador. O Bitcoin Core provavelmente já está a correr.</translation>
+        <source>Unable to bind to %s on this computer. Bitcoin Classic is probably already running.</source>
+        <translation>Incapaz de vincular à porta %s neste computador. O Bitcoin Classic provavelmente já está a correr.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -2958,8 +2958,8 @@
         <translation>Vinculado para dar o endereço para atender as ligações JSON-RPC. Use [host]: Notação de porta para IPv6. Esta opção pode ser especificada várias vezes (padrão: ligam-se a todas as interfaces)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin Core is probably already running.</source>
-        <translation>Impossível trancar a pasta de dados %s. Provavelmente o Bitcoin Core já está a ser executado.</translation>
+        <source>Cannot obtain a lock on data directory %s. Bitcoin Classic is probably already running.</source>
+        <translation>Impossível trancar a pasta de dados %s. Provavelmente o Bitcoin Classic já está a ser executado.</translation>
     </message>
     <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
@@ -2970,8 +2970,8 @@
         <translation>Definir tamanho máximo de transações com alta-prioridade/baixa-taxa em bytes (por defeito: %d)</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Core will not work properly.</source>
-        <translation>Atenção: Por favor verifique que a data e hora do seu computador estão correctas! Se o seu relógio não estiver certo o Bitcoin Core não irá funcionar correctamente.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Classic will not work properly.</source>
+        <translation>Atenção: Por favor verifique que a data e hora do seu computador estão correctas! Se o seu relógio não estiver certo o Bitcoin Classic não irá funcionar correctamente.</translation>
     </message>
     <message>
         <source>(default: %u)</source>
@@ -2982,12 +2982,12 @@
         <translation>Escolha a pasta de dados ao iniciar (por defeito: 0)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Os Programadores do Bitcoin Core</translation>
+        <source>Copyright (C) 2009-%i The Bitcoin Classic Developers</source>
+        <translation>Copyright (C) 2009-%i Os Programadores do Bitcoin Classic</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Core</source>
-        <translation>Erro ao carregar wallet.dat: A Carteira requer uma versão mais recente do Bitcoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Classic</source>
+        <translation>Erro ao carregar wallet.dat: A Carteira requer uma versão mais recente do Bitcoin Classic</translation>
     </message>
     <message>
         <source>Information</source>
@@ -3050,8 +3050,8 @@
         <translation>Nome de utilizador para ligações JSON-RPC</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Bitcoin Core to complete</source>
-        <translation>A Carteira precisou de ser reescrita: reinicie o Bitcoin Core para completar o processo</translation>
+        <source>Wallet needed to be rewritten: restart Bitcoin Classic to complete</source>
+        <translation>A Carteira precisou de ser reescrita: reinicie o Bitcoin Classic para completar o processo</translation>
     </message>
     <message>
         <source>Warning</source>

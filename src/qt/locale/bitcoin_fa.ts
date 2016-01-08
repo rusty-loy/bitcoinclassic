@@ -164,7 +164,7 @@
         <translation>آیا مطمئن هستید که می‌خواهید کیف پول خود را رمزنگاری کنید؟</translation>
     </message>
     <message>
-        <source>Bitcoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Bitcoin Classic will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
         <translation>هسته بیت‌کوین هم اکنون بسته می‌شود تا فرایند رمزگذاری را تمام کند. به خاطر داشته باشید که رمزگذاری کردن کیف پول‌تان نمی‌تواند به طور کامل بیت‌کوین‌های شما را در برابر دزدیده شدن توسط بدافزارهایی که رایانه‌ی شما را آلوده می‌کنند، محافظت نماید.</translation>
     </message>
     <message>
@@ -339,7 +339,7 @@
         <translation>&amp;دریافت</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
+        <source>Show information about Bitcoin Classic</source>
         <translation>نمایش اطلاعات در مورد بیت‌کوین</translation>
     </message>
     <message>
@@ -379,11 +379,11 @@
         <translation>نوارابزار برگه‌ها</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation> هسته Bitcoin </translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
+        <source>&amp;About Bitcoin Classic</source>
         <translation>درباره هسته ی بیت کوین</translation>
     </message>
     <message>
@@ -686,7 +686,7 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation> هسته Bitcoin </translation>
     </message>
     <message>
@@ -694,7 +694,7 @@
         <translation>نسخه</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
+        <source>About Bitcoin Classic</source>
         <translation>درباره هسته ی بیت کوین</translation>
     </message>
     <message>
@@ -717,11 +717,11 @@
         <translation>خوش‌آمدید</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
+        <source>Welcome to Bitcoin Classic.</source>
         <translation>به هسته بیت کوین خوش آمدید.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where Bitcoin Classic will store its data.</source>
         <translation>از آنجایی که این اولین اجرای برنامه است، شما می‌توانید مسیر ذخیرهٔ داده‌ها را انتخاب کنید.</translation>
     </message>
     <message>
@@ -733,7 +733,7 @@
         <translation>استفاده از یک مسیر سفارشی:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation> هسته Bitcoin </translation>
     </message>
     <message>
@@ -1045,7 +1045,7 @@
         <translation>پاکسازی کنسول</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin Core RPC console.</source>
+        <source>Welcome to the Bitcoin Classic RPC console.</source>
         <translation>به کنسول RPC هسته بیت کوین خوش آمدید.</translation>
     </message>
     <message>
@@ -1425,11 +1425,11 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation> هسته Bitcoin </translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Classic developers</source>
         <translation>توسعه‌دهندگان هسته بیت‌کوین</translation>
     </message>
     <message>
@@ -1923,7 +1923,7 @@
         <translation>در حال بازبینی کیف پول...</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Core will not work properly.</source>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Classic will not work properly.</source>
         <translation>هشدار: تاریخ و ساعت کامپیوتر خود را بررسی کنید. اگر ساعت درست نباشد هسته بیت‌کوین به درستی کار نخواهد کرد.</translation>
     </message>
     <message>

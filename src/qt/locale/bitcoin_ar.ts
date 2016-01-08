@@ -283,7 +283,7 @@
         <translation>افتح &amp;URI...</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
+        <source>Bitcoin Classic client</source>
         <translation>عميل bitcion core</translation>
     </message>
     <message>
@@ -327,7 +327,7 @@
         <translation>&amp;استقبل</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
+        <source>Show information about Bitcoin Classic</source>
         <translation>  اظهار معلومات حول bitcion core</translation>
     </message>
     <message>
@@ -359,11 +359,11 @@
         <translation>شريط أدوات علامات التبويب</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>جوهر البيت كوين</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
+        <source>&amp;About Bitcoin Classic</source>
         <translation>حول bitcoin core</translation>
     </message>
     <message>
@@ -602,7 +602,7 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>جوهر البيت كوين</translation>
     </message>
     <message>
@@ -610,7 +610,7 @@
         <translation>النسخة</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
+        <source>About Bitcoin Classic</source>
         <translation>عن جوهر البيت كوين</translation>
     </message>
     <message>
@@ -633,7 +633,7 @@
         <translation>استخدام دليل بيانات مخصص:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>جوهر البيت كوين</translation>
     </message>
     <message>
@@ -1265,11 +1265,11 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>جوهر البيت كوين</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
+        <source>The Bitcoin Classic developers</source>
         <translation>مطوري جوهر البيت كوين</translation>
     </message>
     <message>

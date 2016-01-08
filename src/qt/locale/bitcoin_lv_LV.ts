@@ -263,8 +263,8 @@
         <translation>Atvērt &amp;URI...</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
-        <translation>Bitcoin Core klients</translation>
+        <source>Bitcoin Classic client</source>
+        <translation>Bitcoin Classic klients</translation>
     </message>
     <message>
         <source>Importing blocks from disk...</source>
@@ -315,8 +315,8 @@
         <translation>&amp;Saņemt</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
-        <translation>Parādīt informāciju par Bitcoin Core</translation>
+        <source>Show information about Bitcoin Classic</source>
+        <translation>Parādīt informāciju par Bitcoin Classic</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -355,16 +355,16 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
         <translation>Pieprasīt maksājumus (izveido QR kodu un bitcoin: URIs)</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>Par &amp;Bitcoin Core</translation>
+        <source>&amp;About Bitcoin Classic</source>
+        <translation>Par &amp;Bitcoin Classic</translation>
     </message>
     <message>
         <source>Open a bitcoin: URI or payment request</source>
@@ -678,8 +678,8 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
         <source>version</source>
@@ -690,8 +690,8 @@
         <translation>(%1-biti)</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>Par Bitcoin Core</translation>
+        <source>About Bitcoin Classic</source>
+        <translation>Par Bitcoin Classic</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -709,8 +709,8 @@
         <translation>Sveiciens</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Sveicināts Bitcoin Core</translation>
+        <source>Welcome to Bitcoin Classic.</source>
+        <translation>Sveicināts Bitcoin Classic</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -721,8 +721,8 @@
         <translation>Izmantot pielāgotu datu mapi:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1491,8 +1491,8 @@
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>Bitcoin Core tiek izslēgta...</translation>
+        <source>Bitcoin Classic is shutting down...</source>
+        <translation>Bitcoin Classic tiek izslēgta...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -1621,12 +1621,12 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Bitcoin Core izstrādātāji</translation>
+        <source>The Bitcoin Classic developers</source>
+        <translation>Bitcoin Classic izstrādātāji</translation>
     </message>
     <message>
         <source>[testnet]</source>

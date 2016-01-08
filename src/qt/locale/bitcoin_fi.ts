@@ -168,8 +168,8 @@
         <translation>Haluatko varmasti salata lompakkosi?</translation>
     </message>
     <message>
-        <source>Bitcoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Core sammuu nyt viimeistelläkseen kryptaamisen. Muista että lompakon kryptaaminen ei voi täysin suojata bitcoinejasi varkaudelta malwaren saastuttamalla tietokoneella.</translation>
+        <source>Bitcoin Classic will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin Classic sammuu nyt viimeistelläkseen kryptaamisen. Muista että lompakon kryptaaminen ei voi täysin suojata bitcoinejasi varkaudelta malwaren saastuttamalla tietokoneella.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -295,8 +295,8 @@
         <translation>Avaa &amp;URI...</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
-        <translation>Bitcoin Core ohjelma</translation>
+        <source>Bitcoin Classic client</source>
+        <translation>Bitcoin Classic ohjelma</translation>
     </message>
     <message>
         <source>Importing blocks from disk...</source>
@@ -347,8 +347,8 @@
         <translation>&amp;Vastaanota</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
-        <translation>Näytä tietoja Bitcoin Core:sta</translation>
+        <source>Show information about Bitcoin Classic</source>
+        <translation>Näytä tietoja Bitcoin Classic:sta</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -387,7 +387,7 @@
         <translation>Välilehtipalkki</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin-ydin</translation>
     </message>
     <message>
@@ -395,12 +395,12 @@
         <translation>Pyydä maksuja (Luo QR koodit ja bitcoin: URIt)</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>&amp;Tietoja Bitcoin Core</translation>
+        <source>&amp;About Bitcoin Classic</source>
+        <translation>&amp;Tietoja Bitcoin Classic</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Core</source>
-        <translation>Muokkaa kokoonpanoasetuksia Bitcoin Corelle</translation>
+        <source>Modify configuration options for Bitcoin Classic</source>
+        <translation>Muokkaa kokoonpanoasetuksia Bitcoin Classiclle</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -419,8 +419,8 @@
         <translation>&amp;Komentorivin valinnat</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Näytä Bitcoin Core ohjeet saadaksesi listan mahdollisista Bitcoinin komentorivivalinnoista</translation>
+        <source>Show the Bitcoin Classic help message to get a list with possible Bitcoin command-line options</source>
+        <translation>Näytä Bitcoin Classic ohjeet saadaksesi listan mahdollisista Bitcoinin komentorivivalinnoista</translation>
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to Bitcoin network</source>
@@ -844,7 +844,7 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin-ydin</translation>
     </message>
     <message>
@@ -856,8 +856,8 @@
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>Tietoja Bitcoin Core</translation>
+        <source>About Bitcoin Classic</source>
+        <translation>Tietoja Bitcoin Classic</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -879,16 +879,16 @@
         <translation>Tervetuloa</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Tervetuloa Bitcoin Core</translation>
+        <source>Welcome to Bitcoin Classic.</source>
+        <translation>Tervetuloa Bitcoin Classic</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
-        <translation>Tämän on ensimmäinen kerta kun Bitcoin Core on käynnistetty joten voit valita data-hakemiston paikan.</translation>
+        <source>As this is the first time the program is launched, you can choose where Bitcoin Classic will store its data.</source>
+        <translation>Tämän on ensimmäinen kerta kun Bitcoin Classic on käynnistetty joten voit valita data-hakemiston paikan.</translation>
     </message>
     <message>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Bitcoin Core lataa ja tallentaa kopion Bitcoinin lohkoketjusta. Vähintään %1GB dataa tullaan tallentamaan tähän hakemistoon ja tarve kasvaa ajan myötä. Lomakko tullaan myös tallentamaan tähän hakemistoon.</translation>
+        <source>Bitcoin Classic will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Bitcoin Classic lataa ja tallentaa kopion Bitcoinin lohkoketjusta. Vähintään %1GB dataa tullaan tallentamaan tähän hakemistoon ja tarve kasvaa ajan myötä. Lomakko tullaan myös tallentamaan tähän hakemistoon.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -899,7 +899,7 @@
         <translation>Määritä oma kansio:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin-ydin</translation>
     </message>
     <message>
@@ -1001,12 +1001,12 @@
         <translation>&amp;Verkko</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin Core after logging in to the system.</source>
-        <translation>Käynnistä Bitcoin Core automaattisesti järjestelmään kirjautumisen jälkeen.</translation>
+        <source>Automatically start Bitcoin Classic after logging in to the system.</source>
+        <translation>Käynnistä Bitcoin Classic automaattisesti järjestelmään kirjautumisen jälkeen.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Core on system login</source>
-        <translation>&amp;Käynnistä Bitcoin Core järjestelmään kirjautuessa</translation>
+        <source>&amp;Start Bitcoin Classic on system login</source>
+        <translation>&amp;Käynnistä Bitcoin Classic järjestelmään kirjautuessa</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -1551,8 +1551,8 @@
         <translation>Tyhjennä konsoli</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin Core RPC console.</source>
-        <translation>Tervetuloa Bitcoin Coren RPC-konsoliin.</translation>
+        <source>Welcome to the Bitcoin Classic RPC console.</source>
+        <translation>Tervetuloa Bitcoin Classicn RPC-konsoliin.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2101,7 +2101,7 @@
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
+        <source>Bitcoin Classic is shutting down...</source>
         <translation>Bitcoin core sulkeutuu...</translation>
     </message>
     <message>
@@ -2243,12 +2243,12 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin-ydin</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Bitcoin Core kehittäjät</translation>
+        <source>The Bitcoin Classic developers</source>
+        <translation>Bitcoin Classic kehittäjät</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2777,8 +2777,8 @@
         <translation>Tämä on esi-julkaistu testiversio - Käytä omalla riskillä - Ei saa käytää louhimiseen tai kauppasovelluksiin.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Bitcoin Core is probably already running.</source>
-        <translation>Ei voida yhdistää %s tässä tietokoneessa. Bitcoin Core on luultavasti jo käynnissä.</translation>
+        <source>Unable to bind to %s on this computer. Bitcoin Classic is probably already running.</source>
+        <translation>Ei voida yhdistää %s tässä tietokoneessa. Bitcoin Classic on luultavasti jo käynnissä.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -2937,8 +2937,8 @@
         <translation>Tuodaan lohkoja ulkoisesta blk000??.dat tiedostosta</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin Core is probably already running.</source>
-        <translation>Ei voida lukita data-hakemistoa %s. Bitcoin Core on luultavasti jo käynnissä.</translation>
+        <source>Cannot obtain a lock on data directory %s. Bitcoin Classic is probably already running.</source>
+        <translation>Ei voida lukita data-hakemistoa %s. Bitcoin Classic on luultavasti jo käynnissä.</translation>
     </message>
     <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
@@ -2981,11 +2981,11 @@
         <translation>Yhdistä SOCKS5 proxin kautta</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
+        <source>Copyright (C) 2009-%i The Bitcoin Classic Developers</source>
         <translation>Copyright (C) 2009-%i  Bitcoin kehittäjät</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Core</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Classic</source>
         <translation>Virhe ladattaessa wallet.dat-tiedostoa: Tarvitset uudemman version Bitcoinista</translation>
     </message>
     <message>
@@ -3085,7 +3085,7 @@
         <translation>Käyttäjätunnus JSON-RPC-yhteyksille</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Bitcoin Core to complete</source>
+        <source>Wallet needed to be rewritten: restart Bitcoin Classic to complete</source>
         <translation>Lompakko tarvitsee uudelleenkirjoittaa: käynnistä Bitcoin uudelleen</translation>
     </message>
     <message>

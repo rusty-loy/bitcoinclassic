@@ -168,8 +168,8 @@
         <translation>Weet u zeker dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
-        <source>Bitcoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin Core zal nu afsluiten om het versleutelingsproces te voltooien. Hou er rekening mee dat versleuteling van je portemonnee je niet volledig beschermt tegen diefstal van jouw bitcoins door malware op je computer.</translation>
+        <source>Bitcoin Classic will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <translation>Bitcoin Classic zal nu afsluiten om het versleutelingsproces te voltooien. Hou er rekening mee dat versleuteling van je portemonnee je niet volledig beschermt tegen diefstal van jouw bitcoins door malware op je computer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -295,7 +295,7 @@
         <translation>Open &amp;URI...</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
+        <source>Bitcoin Classic client</source>
         <translation>Bitcoin Kern applicatie</translation>
     </message>
     <message>
@@ -347,7 +347,7 @@
         <translation>&amp;Ontvangen</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
+        <source>Show information about Bitcoin Classic</source>
         <translation>Toon informatie over bitcoin kern</translation>
     </message>
     <message>
@@ -387,7 +387,7 @@
         <translation>Tab-werkbalk</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin Kern</translation>
     </message>
     <message>
@@ -395,12 +395,12 @@
         <translation>Vraag betaling aan (genereert QR codes en bitcoin: URIs)</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>&amp;Over Bitcoin Core</translation>
+        <source>&amp;About Bitcoin Classic</source>
+        <translation>&amp;Over Bitcoin Classic</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Core</source>
-        <translation>Wijzig configuratieopties voor Bitcoin Core</translation>
+        <source>Modify configuration options for Bitcoin Classic</source>
+        <translation>Wijzig configuratieopties voor Bitcoin Classic</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -419,8 +419,8 @@
         <translation>&amp;Commandoregel-opties</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Toon het Bitcoin Core hulpbericht om een lijst te krijgen met mogelijke Bitcoin commandoregelopties</translation>
+        <source>Show the Bitcoin Classic help message to get a list with possible Bitcoin command-line options</source>
+        <translation>Toon het Bitcoin Classic hulpbericht om een lijst te krijgen met mogelijke Bitcoin commandoregelopties</translation>
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to Bitcoin network</source>
@@ -844,7 +844,7 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin Kern</translation>
     </message>
     <message>
@@ -856,8 +856,8 @@
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>Over Bitcoin Core</translation>
+        <source>About Bitcoin Classic</source>
+        <translation>Over Bitcoin Classic</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -879,16 +879,16 @@
         <translation>Welkom</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Welkom bij Bitcoin Core</translation>
+        <source>Welcome to Bitcoin Classic.</source>
+        <translation>Welkom bij Bitcoin Classic</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
-        <translation>Omdat dit de eerste keer is dat het programma gestart is, kunt u nu kiezen waar Bitcoin Core de data moet opslaan.</translation>
+        <source>As this is the first time the program is launched, you can choose where Bitcoin Classic will store its data.</source>
+        <translation>Omdat dit de eerste keer is dat het programma gestart is, kunt u nu kiezen waar Bitcoin Classic de data moet opslaan.</translation>
     </message>
     <message>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Bitcoin Core zal een kopie van de Bitcoin blokketen downloaden en opslaan. Tenminste %1 GB aan data wordt opgeslagen in deze map en het zal groeien in de tijd. De portemonnee wordt ook in deze map opgeslagen.</translation>
+        <source>Bitcoin Classic will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Bitcoin Classic zal een kopie van de Bitcoin blokketen downloaden en opslaan. Tenminste %1 GB aan data wordt opgeslagen in deze map en het zal groeien in de tijd. De portemonnee wordt ook in deze map opgeslagen.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -899,7 +899,7 @@
         <translation>Gebruik een persoonlijke gegevensmap:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin Kern</translation>
     </message>
     <message>
@@ -981,7 +981,7 @@
         <translation>Minimaliseren in plaats van de applicatie af te sluiten wanneer het venster is afgesloten. Als deze optie is ingeschakeld, zal de toepassing pas worden afgesloten na het selecteren van Exit in het menu.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Core.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Classic.</source>
         <translation>Stel hier de taal van de applicatie in. Deze instelling zal van kracht worden na het herstarten van de applicatie.</translation>
     </message>
     <message>
@@ -1009,11 +1009,11 @@
         <translation>&amp;Netwerk</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin Core after logging in to the system.</source>
+        <source>Automatically start Bitcoin Classic after logging in to the system.</source>
         <translation>Bitcoin Kern automatisch starten bij inloggen.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Core on system login</source>
+        <source>&amp;Start Bitcoin Classic on system login</source>
         <translation>&amp;Start Bitcoin Kern tijdens login.</translation>
     </message>
     <message>
@@ -1439,8 +1439,8 @@
         <translation>Huidig aantal blokken</translation>
     </message>
     <message>
-        <source>Open the Bitcoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open het Bitcoin Core debug logbestand van de huidige gegevens directory. Dit kan enkele seconden duren voor grote logbestanden.</translation>
+        <source>Open the Bitcoin Classic debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open het Bitcoin Classic debug logbestand van de huidige gegevens directory. Dit kan enkele seconden duren voor grote logbestanden.</translation>
     </message>
     <message>
         <source>Received</source>
@@ -1555,8 +1555,8 @@
         <translation>Maak console leeg</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin Core RPC console.</source>
-        <translation>Welkom op de Bitcoin Core RPC console.</translation>
+        <source>Welcome to the Bitcoin Classic RPC console.</source>
+        <translation>Welkom op de Bitcoin Classic RPC console.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2113,8 +2113,8 @@
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>Bitcoin Core is aan het afsluiten...</translation>
+        <source>Bitcoin Classic is shutting down...</source>
+        <translation>Bitcoin Classic is aan het afsluiten...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2259,12 +2259,12 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Bitcoin Classic</source>
         <translation>Bitcoin Kern</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>De Bitcoin Core ontwikkelaars</translation>
+        <source>The Bitcoin Classic developers</source>
+        <translation>De Bitcoin Classic ontwikkelaars</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2801,8 +2801,8 @@
         <translation>Dit is een pre-release testversie - gebruik op eigen risico! Gebruik deze niet voor het delven van munten of handelsdoeleinden</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Bitcoin Core is probably already running.</source>
-        <translation>Niet in staat om %s te verbinden op deze computer. Bitcoin Core draait waarschijnlijk al.</translation>
+        <source>Unable to bind to %s on this computer. Bitcoin Classic is probably already running.</source>
+        <translation>Niet in staat om %s te verbinden op deze computer. Bitcoin Classic draait waarschijnlijk al.</translation>
     </message>
     <message>
         <source>WARNING: check your network connection, %d blocks received in the last %d hours (%d expected)</source>
@@ -2981,8 +2981,8 @@
         <translation>Bind aan gegeven adres om te luisteren voor JSON-RPC verbindingen. Gebruik [host]:poort notatie voor IPv6. Deze optie kan meerdere keren gespecificeerd worden (standaard: bind aan alle interfaces.</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin Core is probably already running.</source>
-        <translation>Kan geen lock verkrijgen op gegevensmap %s. Bitcoin Core draait waarschijnlijk al.</translation>
+        <source>Cannot obtain a lock on data directory %s. Bitcoin Classic is probably already running.</source>
+        <translation>Kan geen lock verkrijgen op gegevensmap %s. Bitcoin Classic draait waarschijnlijk al.</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -3065,8 +3065,8 @@ Voorbeeld: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com</transla
         <translation>Let op: -maxtxfee is erg hoog ingesteld! Transactiekosten van dergelijke groottes kunnen in een enkele transactie worden betaald.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Core will not work properly.</source>
-        <translation>Waarschuwing: Controleer dat de datum en tijd van uw computer correct zijn ingesteld! Bij een onjuist ingestelde klok zal Bitcoin Core niet goed werken.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Classic will not work properly.</source>
+        <translation>Waarschuwing: Controleer dat de datum en tijd van uw computer correct zijn ingesteld! Bij een onjuist ingestelde klok zal Bitcoin Classic niet goed werken.</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
@@ -3097,16 +3097,16 @@ Voorbeeld: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com</transla
         <translation>Verbind door SOCKS5 proxy</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Auteursrecht (C) 2009-%i De Bitcoin Core Ontwikkelaars</translation>
+        <source>Copyright (C) 2009-%i The Bitcoin Classic Developers</source>
+        <translation>Auteursrecht (C) 2009-%i De Bitcoin Classic Ontwikkelaars</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>
         <translation>Niet mogelijk om -rpcbind waarde %s te verwerken als netwerk adres</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Core</source>
-        <translation>Fout bij laden wallet.dat: Portemonnee vereist een nieuwere versie van Bitcoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Classic</source>
+        <translation>Fout bij laden wallet.dat: Portemonnee vereist een nieuwere versie van Bitcoin Classic</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>
@@ -3125,8 +3125,8 @@ Voorbeeld: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com</transla
         <translation>Informatie</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Bitcoin Core is shutting down.</source>
-        <translation>Initialisatie sanity check mislukt. Bitcoin Core is aan het afsluiten.</translation>
+        <source>Initialization sanity check failed. Bitcoin Classic is shutting down.</source>
+        <translation>Initialisatie sanity check mislukt. Bitcoin Classic is aan het afsluiten.</translation>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
@@ -3249,8 +3249,8 @@ Voorbeeld: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com</transla
         <translation>Gebruikersnaam voor JSON-RPC-verbindingen</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Bitcoin Core to complete</source>
-        <translation>Portemonnee moest herschreven worden: Herstart Bitcoin Core om te voltooien</translation>
+        <source>Wallet needed to be rewritten: restart Bitcoin Classic to complete</source>
+        <translation>Portemonnee moest herschreven worden: Herstart Bitcoin Classic om te voltooien</translation>
     </message>
     <message>
         <source>Warning</source>

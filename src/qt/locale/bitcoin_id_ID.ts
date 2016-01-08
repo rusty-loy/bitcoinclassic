@@ -267,7 +267,7 @@
         <translation>Buka &amp;URI</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
+        <source>Bitcoin Classic client</source>
         <translation>Client Bitcoin Inti</translation>
     </message>
     <message>
@@ -319,7 +319,7 @@
         <translation>&amp;Menerima</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
+        <source>Show information about Bitcoin Classic</source>
         <translation>Tampilkan informasi tentang Bitcoin Inti</translation>
     </message>
     <message>
@@ -359,16 +359,16 @@
         <translation>Baris tab</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
         <translation>Permintaan pembayaran (membangkitkan kode QR dan bitcoin: URIs)</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>&amp;Mengenai Bitcoin Core</translation>
+        <source>&amp;About Bitcoin Classic</source>
+        <translation>&amp;Mengenai Bitcoin Classic</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -387,8 +387,8 @@
         <translation>&amp;pilihan Perintah-baris</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Tampilkan pesan bantuan Bitcoin Core untuk memberikan daftar pilihan perintah-baris yang memungkinkan dalam aplikasi Bitcoin</translation>
+        <source>Show the Bitcoin Classic help message to get a list with possible Bitcoin command-line options</source>
+        <translation>Tampilkan pesan bantuan Bitcoin Classic untuk memberikan daftar pilihan perintah-baris yang memungkinkan dalam aplikasi Bitcoin</translation>
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to Bitcoin network</source>
@@ -742,16 +742,16 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
         <source>version</source>
         <translation>versi</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>Mengenai Bitcoin Core</translation>
+        <source>About Bitcoin Classic</source>
+        <translation>Mengenai Bitcoin Classic</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -769,8 +769,8 @@
         <translation>Selamat Datang</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Selamat Datang ke Bitcoin Core</translation>
+        <source>Welcome to Bitcoin Classic.</source>
+        <translation>Selamat Datang ke Bitcoin Classic</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -781,8 +781,8 @@
         <translation>Menggunakan direktori data yang dipilih Anda:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1591,8 +1591,8 @@
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>Bitcoin Core sementara dimatikan...</translation>
+        <source>Bitcoin Classic is shutting down...</source>
+        <translation>Bitcoin Classic sementara dimatikan...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -1717,12 +1717,12 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin Classic</source>
+        <translation>Bitcoin Classic</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Pembangun Bitcoin Core</translation>
+        <source>The Bitcoin Classic developers</source>
+        <translation>Pembangun Bitcoin Classic</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2199,8 +2199,8 @@
         <translation>Jalankan perintah ketika perubahan transaksi dompet (%s di cmd digantikan oleh TxID)</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Bitcoin Core is probably already running.</source>
-        <translation>Tidak bisa mengikat dengan %s di computer ini. Kemungkinan Bitcoin Core sudah mulai.</translation>
+        <source>Unable to bind to %s on this computer. Bitcoin Classic is probably already running.</source>
+        <translation>Tidak bisa mengikat dengan %s di computer ini. Kemungkinan Bitcoin Classic sudah mulai.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -2319,8 +2319,8 @@
         <translation>Impor blok dari eksternal berkas blk000???.dat</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin Core is probably already running.</source>
-        <translation>Tidak bisa mengunci data directory %s. Kemungkinan Bitcoin Core sudah mulai.</translation>
+        <source>Cannot obtain a lock on data directory %s. Bitcoin Classic is probably already running.</source>
+        <translation>Tidak bisa mengunci data directory %s. Kemungkinan Bitcoin Classic sudah mulai.</translation>
     </message>
     <message>
         <source>Information</source>
