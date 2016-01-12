@@ -169,7 +169,7 @@
     </message>
     <message>
         <source>Bitcoin Classic will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>位元幣核心現在要關閉，好完成加密程序。請注意，加密錢包不能完全防止入侵你的電腦的惡意程式偷取位元幣。</translation>
+        <translation>位元幣經典現在要關閉，好完成加密程序。請注意，加密錢包不能完全防止入侵你的電腦的惡意程式偷取位元幣。</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -296,7 +296,7 @@
     </message>
     <message>
         <source>Bitcoin Classic client</source>
-        <translation>位元幣核心客戶端軟體</translation>
+        <translation>位元幣經典客戶端軟體</translation>
     </message>
     <message>
         <source>Importing blocks from disk...</source>
@@ -348,7 +348,7 @@
     </message>
     <message>
         <source>Show information about Bitcoin Classic</source>
-        <translation>顯示位元幣核心的相關資訊</translation>
+        <translation>顯示位元幣經典的相關資訊</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -388,7 +388,7 @@
     </message>
     <message>
         <source>Bitcoin Classic</source>
-        <translation>位元幣核心</translation>
+        <translation>位元幣經典</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
@@ -396,11 +396,11 @@
     </message>
     <message>
         <source>&amp;About Bitcoin Classic</source>
-        <translation>關於位元幣核心</translation>
+        <translation>關於位元幣經典</translation>
     </message>
     <message>
         <source>Modify configuration options for Bitcoin Classic</source>
-        <translation>修改位元幣核心的設定選項</translation>
+        <translation>修改位元幣經典的設定選項</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -420,7 +420,7 @@
     </message>
     <message>
         <source>Show the Bitcoin Classic help message to get a list with possible Bitcoin command-line options</source>
-        <translation>顯示位元幣核心的說明訊息，來取得可用命令列選項的列表</translation>
+        <translation>顯示位元幣經典的說明訊息，來取得可用命令列選項的列表</translation>
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to Bitcoin network</source>
@@ -845,7 +845,7 @@
     <name>HelpMessageDialog</name>
     <message>
         <source>Bitcoin Classic</source>
-        <translation>位元幣核心</translation>
+        <translation>位元幣經典</translation>
     </message>
     <message>
         <source>version</source>
@@ -857,7 +857,7 @@
     </message>
     <message>
         <source>About Bitcoin Classic</source>
-        <translation>關於位元幣核心</translation>
+        <translation>關於位元幣經典</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -880,15 +880,15 @@
     </message>
     <message>
         <source>Welcome to Bitcoin Classic.</source>
-        <translation>歡迎使用位元幣核心</translation>
+        <translation>歡迎使用位元幣經典</translation>
     </message>
     <message>
         <source>As this is the first time the program is launched, you can choose where Bitcoin Classic will store its data.</source>
-        <translation>因為這是程式第一次啓動，你可以選擇位元幣核心儲存資料的地方。</translation>
+        <translation>因為這是程式第一次啓動，你可以選擇位元幣經典儲存資料的地方。</translation>
     </message>
     <message>
         <source>Bitcoin Classic will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>位元幣核心會下載並儲存一份位元幣區塊鏈的拷貝。至少有 %1GB 的資料會儲存到這個目錄中，並且還會持續增長。另外錢包資料也會儲存在這個目錄。</translation>
+        <translation>位元幣經典會下載並儲存一份位元幣區塊鏈的拷貝。至少有 %1GB 的資料會儲存到這個目錄中，並且還會持續增長。另外錢包資料也會儲存在這個目錄。</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -900,7 +900,7 @@
     </message>
     <message>
         <source>Bitcoin Classic</source>
-        <translation>位元幣核心</translation>
+        <translation>位元幣經典</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -982,7 +982,7 @@
     </message>
     <message>
         <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Classic.</source>
-        <translation>可以在這裡設定使用者介面的語言。這個設定在重啓位元幣核心後才會生效。</translation>
+        <translation>可以在這裡設定使用者介面的語言。這個設定在重啓位元幣經典後才會生效。</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1010,15 +1010,15 @@
     </message>
     <message>
         <source>Automatically start Bitcoin Classic after logging in to the system.</source>
-        <translation>在登入系統後自動啓動位元幣核心。</translation>
+        <translation>在登入系統後自動啓動位元幣經典。</translation>
     </message>
     <message>
         <source>&amp;Start Bitcoin Classic on system login</source>
-        <translation>系統登入時啟動位元幣核心</translation>
+        <translation>系統登入時啟動位元幣經典</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
-        <translation>(0 表示程式自動決定，小於 0 表示保留處理器核心不用的數目)</translation>
+        <translation>(0 表示程式自動決定，小於 0 表示保留處理器經典不用的數目)</translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -1444,7 +1444,7 @@
     </message>
     <message>
         <source>Open the Bitcoin Classic debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>從目前的資料目錄下開啓位元幣核心的除錯紀錄檔。當紀錄檔很大時，可能會花好幾秒的時間。</translation>
+        <translation>從目前的資料目錄下開啓位元幣經典的除錯紀錄檔。當紀錄檔很大時，可能會花好幾秒的時間。</translation>
     </message>
     <message>
         <source>Received</source>
@@ -1564,7 +1564,7 @@
     </message>
     <message>
         <source>Welcome to the Bitcoin Classic RPC console.</source>
-        <translation>歡迎使用位元幣核心 RPC 主控台。</translation>
+        <translation>歡迎使用位元幣經典 RPC 主控台。</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2138,7 +2138,7 @@
     <name>ShutdownWindow</name>
     <message>
         <source>Bitcoin Classic is shutting down...</source>
-        <translation>正在關閉位元幣核心中...</translation>
+        <translation>正在關閉位元幣經典中...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2288,11 +2288,11 @@
     <name>SplashScreen</name>
     <message>
         <source>Bitcoin Classic</source>
-        <translation>位元幣核心</translation>
+        <translation>位元幣經典</translation>
     </message>
     <message>
         <source>The Bitcoin Classic developers</source>
-        <translation>位元幣核心開發人員</translation>
+        <translation>位元幣經典開發人員</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2835,7 +2835,7 @@
     </message>
     <message>
         <source>Set the number of script verification threads (%u to %d, 0 = auto, &lt;0 = leave that many cores free, default: %d)</source>
-        <translation>設定指令碼驗證的執行緒數目 (%u 到 %d，0 表示程式自動決定，小於 0 表示保留處理器核心不用的數目，預設值: %d)</translation>
+        <translation>設定指令碼驗證的執行緒數目 (%u 到 %d，0 表示程式自動決定，小於 0 表示保留處理器經典不用的數目，預設值: %d)</translation>
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
@@ -2843,7 +2843,7 @@
     </message>
     <message>
         <source>Unable to bind to %s on this computer. Bitcoin Classic is probably already running.</source>
-        <translation>沒辦法繫結在這台電腦上的 %s 。位元幣核心可能已經在執行了。</translation>
+        <translation>沒辦法繫結在這台電腦上的 %s 。位元幣經典可能已經在執行了。</translation>
     </message>
     <message>
         <source>WARNING: abnormally high number of blocks generated, %d blocks received in the last %d hours (%d expected)</source>
@@ -3031,7 +3031,7 @@
     </message>
     <message>
         <source>Cannot obtain a lock on data directory %s. Bitcoin Classic is probably already running.</source>
-        <translation>沒辦法鎖定資料目錄 %s。位元幣核心可能已經在執行了。</translation>
+        <translation>沒辦法鎖定資料目錄 %s。位元幣經典可能已經在執行了。</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -3087,7 +3087,7 @@
     </message>
     <message>
         <source>Set the number of threads for coin generation if enabled (-1 = all cores, default: %d)</source>
-        <translation>設定產生錢幣的執行緒數目(-1 表示處理器核心數，預設值: %d)</translation>
+        <translation>設定產生錢幣的執行緒數目(-1 表示處理器經典數，預設值: %d)</translation>
     </message>
     <message>
         <source>The transaction amount is too small to send after the fee has been deducted</source>
@@ -3127,7 +3127,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Classic will not work properly.</source>
-        <translation>警告: 請檢查電腦日期和時間是否正確！位元幣核心沒辦法在時鐘不準的情況下正常運作。</translation>
+        <translation>警告: 請檢查電腦日期和時間是否正確！位元幣經典沒辦法在時鐘不準的情況下正常運作。</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
@@ -3167,7 +3167,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Copyright (C) 2009-%i The Bitcoin Classic Developers</source>
-        <translation>版權為位元幣核心開發人員自西元 2009 至 %i 年起所有</translation>
+        <translation>版權為位元幣經典開發人員自西元 2009 至 %i 年起所有</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>
@@ -3175,7 +3175,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Classic</source>
-        <translation>載入 wallet.dat 檔案時發生錯誤: 這個錢包需要新版的位元幣核心</translation>
+        <translation>載入 wallet.dat 檔案時發生錯誤: 這個錢包需要新版的位元幣經典</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>
@@ -3199,7 +3199,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Initialization sanity check failed. Bitcoin Classic is shutting down.</source>
-        <translation>初始化時的基本檢查失敗了。位元幣核心就要關閉了。</translation>
+        <translation>初始化時的基本檢查失敗了。位元幣經典就要關閉了。</translation>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
@@ -3335,7 +3335,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Wallet needed to be rewritten: restart Bitcoin Classic to complete</source>
-        <translation>錢包需要重寫: 請重新啓動位元幣核心來完成</translation>
+        <translation>錢包需要重寫: 請重新啓動位元幣經典來完成</translation>
     </message>
     <message>
         <source>Warning</source>

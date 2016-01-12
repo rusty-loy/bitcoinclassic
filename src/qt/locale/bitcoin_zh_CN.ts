@@ -169,7 +169,7 @@
     </message>
     <message>
         <source>Bitcoin Classic will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>比特币核心现在将关闭以完成加密过程。请记住，在您的计算机被恶意软件感染的情况下，加密不能完全保护您的比特币免于被盗。</translation>
+        <translation>比特币经典现在将关闭以完成加密过程。请记住，在您的计算机被恶意软件感染的情况下，加密不能完全保护您的比特币免于被盗。</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -296,7 +296,7 @@
     </message>
     <message>
         <source>Bitcoin Classic client</source>
-        <translation>比特币核心钱包</translation>
+        <translation>比特币经典钱包</translation>
     </message>
     <message>
         <source>Importing blocks from disk...</source>
@@ -348,7 +348,7 @@
     </message>
     <message>
         <source>Show information about Bitcoin Classic</source>
-        <translation>显示有关比特币核心钱包信息</translation>
+        <translation>显示有关比特币经典钱包信息</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -388,7 +388,7 @@
     </message>
     <message>
         <source>Bitcoin Classic</source>
-        <translation>比特币核心</translation>
+        <translation>比特币经典</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
@@ -396,11 +396,11 @@
     </message>
     <message>
         <source>&amp;About Bitcoin Classic</source>
-        <translation>关于比特币核心(&amp;A)</translation>
+        <translation>关于比特币经典(&amp;A)</translation>
     </message>
     <message>
         <source>Modify configuration options for Bitcoin Classic</source>
-        <translation>修改比特币核心的配置选项</translation>
+        <translation>修改比特币经典的配置选项</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -420,7 +420,7 @@
     </message>
     <message>
         <source>Show the Bitcoin Classic help message to get a list with possible Bitcoin command-line options</source>
-        <translation>显示比特币核心 程序帮助信息，获取可用的命令行选项 </translation>
+        <translation>显示比特币经典 程序帮助信息，获取可用的命令行选项 </translation>
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to Bitcoin network</source>
@@ -845,7 +845,7 @@
     <name>HelpMessageDialog</name>
     <message>
         <source>Bitcoin Classic</source>
-        <translation>比特币核心</translation>
+        <translation>比特币经典</translation>
     </message>
     <message>
         <source>version</source>
@@ -857,7 +857,7 @@
     </message>
     <message>
         <source>About Bitcoin Classic</source>
-        <translation>关于比特币核心</translation>
+        <translation>关于比特币经典</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -880,15 +880,15 @@
     </message>
     <message>
         <source>Welcome to Bitcoin Classic.</source>
-        <translation>欢迎使用 比特币核心 程序。</translation>
+        <translation>欢迎使用 比特币经典 程序。</translation>
     </message>
     <message>
         <source>As this is the first time the program is launched, you can choose where Bitcoin Classic will store its data.</source>
-        <translation>由于这是第一次运行 比特币核心 程序，您可以选择数据存储目录。</translation>
+        <translation>由于这是第一次运行 比特币经典 程序，您可以选择数据存储目录。</translation>
     </message>
     <message>
         <source>Bitcoin Classic will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>比特币核心 程序会下载储存一份数据块链(blockchain)。至少需要 %1 GB的存储空间，随着时间推移会需要更多的存储空间。钱包文件也储存在该目录。</translation>
+        <translation>比特币经典 程序会下载储存一份数据块链(blockchain)。至少需要 %1 GB的存储空间，随着时间推移会需要更多的存储空间。钱包文件也储存在该目录。</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -900,7 +900,7 @@
     </message>
     <message>
         <source>Bitcoin Classic</source>
-        <translation>比特币核心</translation>
+        <translation>比特币经典</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -982,7 +982,7 @@
     </message>
     <message>
         <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Classic.</source>
-        <translation>可以在这里设置用户界面语言。此设置将在重新启动比特币核心后生效。</translation>
+        <translation>可以在这里设置用户界面语言。此设置将在重新启动比特币经典后生效。</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1010,15 +1010,15 @@
     </message>
     <message>
         <source>Automatically start Bitcoin Classic after logging in to the system.</source>
-        <translation>登录到系统后自动启动比特币核心。</translation>
+        <translation>登录到系统后自动启动比特币经典。</translation>
     </message>
     <message>
         <source>&amp;Start Bitcoin Classic on system login</source>
-        <translation>系统登录时启动比特币核心(&amp;S)</translation>
+        <translation>系统登录时启动比特币经典(&amp;S)</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
-        <translation>(0 = 自动, &lt;0 = 离开很多免费的核心)</translation>
+        <translation>(0 = 自动, &lt;0 = 离开很多免费的经典)</translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -1444,7 +1444,7 @@
     </message>
     <message>
         <source>Open the Bitcoin Classic debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>从当前的数据目录打开比特币核心调试日志文件。对于较大的日志文件，这可能需要几秒钟。</translation>
+        <translation>从当前的数据目录打开比特币经典调试日志文件。对于较大的日志文件，这可能需要几秒钟。</translation>
     </message>
     <message>
         <source>Received</source>
@@ -1564,7 +1564,7 @@
     </message>
     <message>
         <source>Welcome to the Bitcoin Classic RPC console.</source>
-        <translation>欢迎使用 比特币核心 RPC 控制台。</translation>
+        <translation>欢迎使用 比特币经典 RPC 控制台。</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2142,7 +2142,7 @@
     <name>ShutdownWindow</name>
     <message>
         <source>Bitcoin Classic is shutting down...</source>
-        <translation>比特币核心正在关机...</translation>
+        <translation>比特币经典正在关机...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2292,7 +2292,7 @@
     <name>SplashScreen</name>
     <message>
         <source>Bitcoin Classic</source>
-        <translation>比特币核心</translation>
+        <translation>比特币经典</translation>
     </message>
     <message>
         <source>The Bitcoin Classic developers</source>
@@ -2844,7 +2844,7 @@
     </message>
     <message>
         <source>Set the number of script verification threads (%u to %d, 0 = auto, &lt;0 = leave that many cores free, default: %d)</source>
-        <translation>设置脚本验证的程序 (%u 到 %d, 0 = 自动, &lt;0 = 保留自由的核心, 默认值: %d)</translation>
+        <translation>设置脚本验证的程序 (%u 到 %d, 0 = 自动, &lt;0 = 保留自由的经典, 默认值: %d)</translation>
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
@@ -2852,7 +2852,7 @@
     </message>
     <message>
         <source>Unable to bind to %s on this computer. Bitcoin Classic is probably already running.</source>
-        <translation>无法 %s的绑定到电脑上，比特币核心钱包可能已经在运行。</translation>
+        <translation>无法 %s的绑定到电脑上，比特币经典钱包可能已经在运行。</translation>
     </message>
     <message>
         <source>WARNING: abnormally high number of blocks generated, %d blocks received in the last %d hours (%d expected)</source>
@@ -3044,7 +3044,7 @@
     </message>
     <message>
         <source>Cannot obtain a lock on data directory %s. Bitcoin Classic is probably already running.</source>
-        <translation>无法获取数据目录的 %s. 比特币核心钱包可能已经在运行.</translation>
+        <translation>无法获取数据目录的 %s. 比特币经典钱包可能已经在运行.</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -3188,7 +3188,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Classic</source>
-        <translation>加载wallet.dat错误：需要新版的比特币核心钱包</translation>
+        <translation>加载wallet.dat错误：需要新版的比特币经典钱包</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>
@@ -3345,7 +3345,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Wallet needed to be rewritten: restart Bitcoin Classic to complete</source>
-        <translation>钱包需要被改写：重新启动核心钱包来完成</translation>
+        <translation>钱包需要被改写：重新启动经典钱包来完成</translation>
     </message>
     <message>
         <source>Warning</source>
