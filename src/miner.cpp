@@ -122,12 +122,22 @@ CBlockTemplate* CreateNewBlock(const CChainParams& chainparams, const CScript& s
         pblock->nTime = GetAdjustedTime();
         const int64_t nMedianTimePast = pindexPrev->GetMedianTimePast();
 
-        unsigned int nSizeLimit = MaxBlockSize(nMedianTimePast);
+        pblock->nVersion = BASE_VERSION | ForkBits(pblock->nTime);
+        // -regtest only: allow overriding block.nVersion with
+        // -blockversion=N to test forking scenarios
+        if (Params().MineBlocksOnDemand())
+            pblock->nVersion = GetArg("-blockversion", pblock->nVersion);
 
-        // Largest block you're willing to create:
-        unsigned int nBlockMaxSize = GetArg("-blockmaxsize", DEFAULT_BLOCK_MAX_SIZE);
-        // Limit to betweeen 1K and max size-1K for sanity:
-        nBlockMaxSize = std::max((unsigned int)1000, std::min((unsigned int)(nSizeLimit-1000), nBlockMaxSize));
+        UpdateTime(pblock, Params().GetConsensus(), pindexPrev);
+
+        uint32_t nConsensusMaxSize = MaxBlockSize(pblock->nTime);
+        // Largest block you're willing to create, defaults to being the biggest possible.
+        // Miners can adjust downwards if they wish to throttle their blocks, for instance, to work around
+        // high orphan rates or other scaling problems.
+        uint32_t nBlockMaxSize = (uint32_t) GetArg("-blockmaxsize", nConsensusMaxSize);
+        // Limit to betweeen 1K and MAX_BLOCK_SIZE-1K for sanity:
+        nBlockMaxSize = std::max((uint32_t)1000,
+                                 std::min(nConsensusMaxSize-1000, nBlockMaxSize));
 
         // How much of the block should be dedicated to high-priority transactions,
         // included regardless of the fees they pay
