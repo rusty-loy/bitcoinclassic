@@ -10,7 +10,7 @@ from test_framework.mininode import CTransaction, NetworkThread
 from test_framework.blocktools import create_coinbase, create_block
 from test_framework.comptool import TestInstance, TestManager
 from test_framework.script import CScript, OP_1NEGATE, OP_CHECKLOCKTIMEVERIFY, OP_DROP
-from binascii import unhexlify
+from binascii import hexlify, unhexlify
 import cStringIO
 import time
 
@@ -85,9 +85,9 @@ class BIP65Test(ComparisonTestFramework):
             height += 1
         yield TestInstance(test_blocks, sync_every_block=False)
 
-        ''' Mine 749 version 4 blocks '''
+        ''' Mine 74 version 4 blocks '''
         test_blocks = []
-        for i in xrange(749):
+        for i in xrange(74):
             block = create_block(self.tip, create_coinbase(height), self.last_block_time + 1)
             block.nVersion = 4
             block.rehash()
@@ -99,7 +99,7 @@ class BIP65Test(ComparisonTestFramework):
         yield TestInstance(test_blocks, sync_every_block=False)
 
         '''
-        Check that the new CLTV rules are not enforced in the 750th
+        Check that the new CLTV rules are not enforced in the 75th
         version 3 block.
         '''
         spendtx = self.create_transaction(self.nodes[0],
@@ -120,7 +120,7 @@ class BIP65Test(ComparisonTestFramework):
         yield TestInstance([[block, True]])
 
         '''
-        Check that the new CLTV rules are enforced in the 751st version 4
+        Check that the new CLTV rules are enforced in the 76th version 4
         block.
         '''
         spendtx = self.create_transaction(self.nodes[0],
@@ -137,9 +137,9 @@ class BIP65Test(ComparisonTestFramework):
         self.last_block_time += 1
         yield TestInstance([[block, False]])
 
-        ''' Mine 199 new version blocks on last valid tip '''
+        ''' Mine 19 new version blocks on last valid tip '''
         test_blocks = []
-        for i in xrange(199):
+        for i in xrange(19):
             block = create_block(self.tip, create_coinbase(height), self.last_block_time + 1)
             block.nVersion = 4
             block.rehash()
