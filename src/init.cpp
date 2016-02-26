@@ -1147,8 +1147,17 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
                 }
 
                 if (chainstateScrambled || blockDbScrambled) {
-                   strLoadError = _("Reindex required as the chainstate or block database is obfuscated");
-                   break;
+                    bool fRet = uiInterface.ThreadSafeMessageBox(
+                        _("The chainstate or block database is obfuscated.  Click OK to restore the database now."),
+                        "", CClientUIInterface::MSG_ERROR | CClientUIInterface::BTN_ABORT);
+                    
+                    if (fRet) {
+                        pblocktree->UnObfuscate();
+                        pcoinsdbview->UnObfuscate();
+                    } else {
+                       strLoadError = _("Reindex required as the chainstate or block database is obfuscated");
+                       break;
+                    }
                 }
 
                 if (!LoadBlockIndex()) {

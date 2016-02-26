@@ -154,6 +154,62 @@ bool CCoinsViewDB::GetStats(CCoinsStats &stats) const {
     return true;
 }
 
+static void Xor(const std::vector<unsigned char>& key, std::string& value)
+{
+    if (key.size() == 0) {
+        return;
+    }
+
+    for (size_t i = 0, j = 0; i != value.size(); i++) {
+        value[i] ^= key[j++];
+
+        if (j == key.size())
+            j = 0;
+    }
+}
+
+static bool DoUnObfuscate(CLevelDBWrapper& db) {
+    std::vector<unsigned char> obfuscate_key;
+
+    if (db.Read(db.GetObfuscateKeyName(), obfuscate_key)) {
+        boost::scoped_ptr<leveldb::Iterator> pcursor(db.NewIterator());
+        pcursor->SeekToFirst();
+
+        std::list<std::string> values;
+        leveldb::WriteBatch batch;
+
+        // Accumulate all the xored (unobfuscated) values so they can be batch updated
+        while (pcursor->Valid()) {
+            boost::this_thread::interruption_point();
+            try {
+                leveldb::Slice slKey = pcursor->key();
+                values.push_back(pcursor->value().ToString());
+                Xor(obfuscate_key, values.back());
+                batch.Put(slKey, values.back());
+
+                pcursor->Next();
+            } catch (const std::exception& e) {
+                return error("%s: Deserialize or I/O error - %s", __func__, e.what());
+            }
+        }
+
+        {
+            // Overwrite the obfuscated values with the original values
+            boost::this_thread::interruption_point();
+            db.WriteBatch(batch);
+            
+            // Erase the obfuscation key from the db
+            db.Erase(db.GetObfuscateKeyName(), true);
+        }
+    }
+
+    return true;    
+}
+
+bool CCoinsViewDB::UnObfuscate() {
+    return DoUnObfuscate(db);
+}
+
 bool CBlockTreeDB::WriteBatchSync(const std::vector<std::pair<int, const CBlockFileInfo*> >& fileInfo, int nLastFile, const std::vector<const CBlockIndex*>& blockinfo) {
     CLevelDBBatch batch;
     for (std::vector<std::pair<int, const CBlockFileInfo*> >::const_iterator it=fileInfo.begin(); it != fileInfo.end(); it++) {
@@ -299,3 +355,8 @@ bool CBlockTreeDB::ActivateForkBit(int32_t nForkVersionBit, const uint256& block
     else
         return Write(make_pair(DB_FORK_ACTIVATION, nForkVersionBit), blockHash);
 }
+
+bool CBlockTreeDB::UnObfuscate() {
+    return DoUnObfuscate(*this);
+}
+

@@ -84,9 +84,19 @@ CLevelDBWrapper::~CLevelDBWrapper()
     options.env = NULL;
 }
 
+std::string CLevelDBWrapper::GetObfuscateKeyName() const
+{
+    return OBFUSCATE_KEY_KEY;
+}
+
 bool CLevelDBWrapper::WriteBatch(CLevelDBBatch& batch, bool fSync) throw(leveldb_error)
 {
-    leveldb::Status status = pdb->Write(fSync ? syncoptions : writeoptions, &batch.batch);
+    return WriteBatch(batch.batch, fSync);
+}
+
+bool CLevelDBWrapper::WriteBatch(leveldb::WriteBatch& batch, bool fSync) throw(leveldb_error)
+{
+    leveldb::Status status = pdb->Write(fSync ? syncoptions : writeoptions, &batch);
     HandleError(status);
     return true;
 }

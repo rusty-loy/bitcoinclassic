@@ -39,6 +39,7 @@ public:
     uint256 GetBestBlock() const;
     bool BatchWrite(CCoinsMap &mapCoins, const uint256 &hashBlock);
     bool GetStats(CCoinsStats &stats) const;
+    bool UnObfuscate();
 };
 
 /** Access to the block database (blocks/index/) */
@@ -64,6 +65,7 @@ public:
     bool LoadBlockIndexGuts();
     uint256 ForkBitActivated(int32_t nForkVersionBit) const;
     bool ActivateForkBit(int32_t nForkVersionBit, const uint256& blockHash);
+    bool UnObfuscate();
 };
 
 #endif // BITCOIN_TXDB_H
